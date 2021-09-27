@@ -3,7 +3,7 @@ This program is designed to help in solving problems of the theory of probabilit
     Function fac
     Returns the factorial of a number
 
-    :param n: the number for which we are looking for the factorial, non-negative
+    :param n: the number for which we are looking for the factorial, number
     :return: factorial of n
     
 
@@ -12,22 +12,22 @@ This program is designed to help in solving problems of the theory of probabilit
 
         Function combination
         Returns the number of combinations
-        :param n: total number of objects, natural number
-        :param m: number of objects in the sample, natural number
-        :return: number of combinations, natural number
+        :param n: total number of objects, number
+        :param m: number of objects in the sample, number
+        :return: number of combinations, number
         
 
         Function permutations
         Returns the number of permutations
-        :param n: amount of elements, natural number
-        :return: number of permutations, natural number
+        :param n: amount of elements, number
+        :return: number of permutations, number
         
 
         Function accommodation
         Returns the number of accommodations
-        :param n: total number of objects, natural number
-        :param m: number of objects in the sample, natural number
-        :return: number of accommodations, natural number
+        :param n: total number of objects, number
+        :param m: number of objects in the sample,number
+        :return: number of accommodations, number
         
 
     Class FormulasTerver containing formulas of probability theory
@@ -35,26 +35,26 @@ This program is designed to help in solving problems of the theory of probabilit
 
         Function probability
         Returns the probability of an event
-        :param n: total amount(all events), non-negative
-        :param m: favorable events, non-negative
-        :return: probability of an event, non-negative, less than or equal to 1
+        :param n: total amount(all events), number
+        :param m: favorable events, number
+        :return: probability of an event, number
         
 
         Function bernoulli
         Returns the probability that event A will occur exactly k times out of n
-        :param n: number of independent tests, natural number
-        :param m: required number of repetitions, natural number
-        :param p: probability of occurrence of event A in each trial, non-negative, less than or equal to 1
-        :return: probability that event A will occur exactly k times out of n, non-negative, less than or equal to 1
+        :param n: number of independent tests, number
+        :param m: required number of repetitions, number
+        :param p: probability of occurrence of event A in each trial, number
+        :return: probability that event A will occur exactly k times out of n, number
         
 
         Function poisson
         Returns the probability that event A will occur exactly k times out of n
         n is large and the probability is less than 0.1
-        :param n: number of independent tests, natural number
-        :param m: required number of repetitions, natural number
-        :param p: probability of occurrence of event A in each trial, non-negative, less than or equal to 1
-        :return: probability that event A will occur exactly k times out of n, non-negative, less than or equal to 1        
+        :param n: number of independent tests, number
+        :param m: required number of repetitions, number
+        :param p: probability of occurrence of event A in each trial, number
+        :return: probability that event A will occur exactly k times out of n, number     
 
 
     Class FormulasTerver containing formulas of probability theory
