@@ -122,43 +122,43 @@ class Show:
     '''
     class Show
     '''
-    def start(self):
+    def __init__(self):
+        self.i=1
+
+    def start(self, inpt):
         '''
         Function start
-        Displays a possible use case, takes input and displays the result
-        :return: none
+        :param inpt: a string of 4 characters separated by a space
+                    the first character is the choice of action:
+                         1 - count the number of permutations
+                         2 - count the number of combinations
+                         3 - count the number of placements
+                         4 - calculate the probability of an event
+                         5 - calculate the probability using the Bernouli formula
+                         6 - calculate the probability by Poisson's formula
+                    second character - n
+                    the third character is m, if there is no such character then "."
+                    the fourth character is n, if there is no such character then "."
+        :return: result, if the input is incorrect then -1
         '''
+
         fc = FormulasCombinatorics()
         ft = FormulasTerver(fc)
+        inpt = inpt.split(' ')
 
-        while 1:
-             print('0 - выход\n'
-                   '1 - посчитать кол-во перестановок\n'
-                    '2 - посчитать кол-во сочетаний\n'
-                    '3 - посчитать кол-во размещений\n'
-                    '4 - посчитать вероятность события\n'
-                    '5 - посчитать вероятность по формуле Бернули\n'
-                    '6 - посчитать вероятность по формуле Пуассона')
-             inpt = int(input('    ->'))
-             if inpt == 0:
-                 exit()
-             else:
-                 n = int(input('n = '))
-                 if inpt == 1:
-                     print('P = ', fc.permutations(n))
-                 else:
-                     m = int(input('m = '))
-                     if inpt == 2:
-                         print('C = ',fc.combination(n, m))
-                     elif inpt == 3:
-                         print('A = ', fc.accommodation(n, m))
-                     elif inpt == 4:
-                         print('P(A) = ', ft.probability(n, m))
-                     else:
-                         p = float(input('p = '))
-                         if inpt == 6:
-                             print('P(A) = ', ft.bernoulli(n, m, p))
-                         elif inpt == 7:
-                             print(ft.poisson(n, m, p))
-                         else:
-                             print('ERROR')
+        if inpt[0] == '0':
+            exit()
+        elif inpt[0] == '1':
+            return fc.permutations(int(inpt[1]))
+        elif inpt[0] == '2':
+            return fc.combination(int(inpt[1]),int(inpt[2]))
+        elif inpt[0] == '3':
+            return fc.accommodation(int(inpt[1]), int(inpt[2]))
+        elif inpt[0] == '4':
+            return ft.probability(int(inpt[1]), int(inpt[2]))
+        elif inpt[0] == '5':
+            return ft.bernoulli(int(inpt[1]), int(inpt[2]), float(inpt[3]))
+        elif inpt[0] == '6':
+            return ft.poisson(int(inpt[1]), int(inpt[2]), float(inpt[3]))
+        else:
+            return -1
