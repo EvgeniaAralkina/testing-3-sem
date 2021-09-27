@@ -60,6 +60,16 @@ This program is designed to help in solving problems of the theory of probabilit
     Class FormulasTerver containing formulas of probability theory
     
 
-        Function start
-        Displays a possible use case, takes input and displays the result
-        :return: none
+                Function start
+        :param inpt: a string of 4 characters separated by a space
+                    the first character is the choice of action:
+                         1 - count the number of permutations
+                         2 - count the number of combinations
+                         3 - count the number of placements
+                         4 - calculate the probability of an event
+                         5 - calculate the probability using the Bernouli formula
+                         6 - calculate the probability by Poisson's formula
+                    second character - n
+                    the third character is m, if there is no such character then "."
+                    the fourth character is n, if there is no such character then "."
+        :return: result, int, if the input is incorrect then -1
