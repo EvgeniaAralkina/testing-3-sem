@@ -1,0 +1,65 @@
+This program is designed to help in solving problems of the theory of probability.
+
+    Function fac
+    Returns the factorial of a number
+
+    :param n: the number for which we are looking for the factorial, non-negative
+    :return: factorial of n
+    
+
+    Class FormulasCombinatorics containing combinatorial formulas
+    
+
+        Function combination
+        Returns the number of combinations
+        :param n: total number of objects, natural number
+        :param m: number of objects in the sample, natural number
+        :return: number of combinations, natural number
+        
+
+        Function permutations
+        Returns the number of permutations
+        :param n: amount of elements, natural number
+        :return: number of permutations, natural number
+        
+
+        Function accommodation
+        Returns the number of accommodations
+        :param n: total number of objects, natural number
+        :param m: number of objects in the sample, natural number
+        :return: number of accommodations, natural number
+        
+
+    Class FormulasTerver containing formulas of probability theory
+    
+
+        Function probability
+        Returns the probability of an event
+        :param n: total amount(all events), non-negative
+        :param m: favorable events, non-negative
+        :return: probability of an event, non-negative, less than or equal to 1
+        
+
+        Function bernoulli
+        Returns the probability that event A will occur exactly k times out of n
+        :param n: number of independent tests, natural number
+        :param m: required number of repetitions, natural number
+        :param p: probability of occurrence of event A in each trial, non-negative, less than or equal to 1
+        :return: probability that event A will occur exactly k times out of n, non-negative, less than or equal to 1
+        
+
+        Function poisson
+        Returns the probability that event A will occur exactly k times out of n
+        n is large and the probability is less than 0.1
+        :param n: number of independent tests, natural number
+        :param m: required number of repetitions, natural number
+        :param p: probability of occurrence of event A in each trial, non-negative, less than or equal to 1
+        :return: probability that event A will occur exactly k times out of n, non-negative, less than or equal to 1        
+
+
+    Class FormulasTerver containing formulas of probability theory
+    
+
+        Function start
+        Displays a possible use case, takes input and displays the result
+        :return: none
